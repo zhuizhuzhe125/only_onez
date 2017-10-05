@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:background="@mipmap/title_head">
+    <com.only.yc.only_ImageView.MyImageView
+        android:id="@+id/Index_Drawer_head_ImageView_Portrait"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="20dp"
+        android:src="@mipmap/main"
+        tools:ignore="RtlHardcoded" />
+
+    <TextView
+        android:id="@+id/Index_Drawer_head_Txt_UserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="50dp"
+        android:textSize="34dp"
+        android:text="@string/app_name"
+        tools:ignore="RtlHardcoded,SpUsage" />
+
+    <TextView
+        android:id="@+id/Index_Drawer_head_Txt_UserTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="60dp"
+        android:textSize="24dp"
+        android:text="@string/Index_Drawer_head_Txt_UserTitle"
+        tools:ignore="RtlHardcoded,SpUsage" />
+
+</LinearLayout>

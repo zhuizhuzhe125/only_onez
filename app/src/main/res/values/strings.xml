@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Only_onez</string>
+    <string name="Login_name">注册</string>
+    <string name="Entry_name">登录</string>
+    <string name="UserName">用&#160;&#160;户&#160;&#160;名：</string>
+    <string name="UserPassword">密&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;码：</string>
+    <string name="ShowUserName">请输入用户名！</string>
+    <string name="ShowUserPassword">请输入密码！</string>
+    <string name="ShowtUserPassword">确认密码：</string>
+    <string name="ShowtoUserPassword">确认密码！</string>
+    <string name="Login_btn_OK">注&#160;&#160;册</string>
+    <string name="Entry_Btn_OK">登&#160;&#160;录</string>
+    <string name="Index_Drawer_head_Txt_UserTitle">个性签名</string>
+    <!--<string name="Login_btn_Q">重&#160;&#160;置</string>-->
+</resources>
