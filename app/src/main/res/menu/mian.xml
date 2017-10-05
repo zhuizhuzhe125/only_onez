@@ -4,7 +4,16 @@
 
     <item
         android:id="@+id/Index_menu_Add"
-        android:title="tianjia"
+        android:title="添加好友"
+        tools:ignore="HardcodedText" />
+
+    <item
+        android:id="@+id/Index_menu_Setting"
+        android:title="设置"
+        tools:ignore="HardcodedText" />
+    <item
+        android:id="@+id/Index_menu_Search"
+        android:title="搜索"
         tools:ignore="HardcodedText" />
 
 </menu>

@@ -12,14 +12,47 @@
         app:headerLayout="@layout/index_drawerlayout_head"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
+        android:background="#ffffff"
         android:layout_gravity="start">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <Button
+                android:id="@+id/Index_Navigat_Button_Login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="15dp"
+                android:background="#19ed20"
+                android:text="@string/Entry_Btn_OK"
+                tools:ignore="RtlHardcoded" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <Button
+                    android:id="@+id/Index_Navigat_Button_Exit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginLeft="40dp"
+                    android:background="#19ed20"
+                    android:text="@string/Exit"
+                    tools:ignore="RtlHardcoded" />
+
+            </LinearLayout>
+
+        </LinearLayout>
     </android.support.design.widget.NavigationView>
 
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-        <include layout="@layout/title"/>
+        <include layout="@layout/title" />
     </LinearLayout>
 
 </android.support.v4.widget.DrawerLayout>
