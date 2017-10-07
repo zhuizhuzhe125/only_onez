@@ -216,27 +216,17 @@ public class Index extends AppCompatActivity implements View.OnClickListener {
     //判断要显示那张图片；
     @Override
     public void onClick(View v) {
+        Image_n();
         switch (v.getId()) {
             case R.id.Bottom_Linear_Message_board:
-                setSect(1);
-                break;
-            case R.id.Bottom_Linear_Friend:
-                setSect(2);
-                break;
-        }
-    }
-
-    public void setSect(int vim) {
-        Image_n();
-        switch (vim) {
-            case 1:
                 mViewPager.setCurrentItem(0);
                 Bmessage.setImageResource(R.mipmap.message_board_one);
                 break;
-            case 2:
+            case R.id.Bottom_Linear_Friend:
                 mViewPager.setCurrentItem(1);
                 Bfriend.setImageResource(R.mipmap.friend_one);
                 break;
         }
     }
+
 }
