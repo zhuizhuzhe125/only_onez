@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:clickable="true"
+    android:background="#ffff"
     tools:context="com.only.yc.only_onez.Index">
     <LinearLayout
         android:weightSum="4"
@@ -30,7 +31,23 @@
                 android:layout_height="match_parent">
 
             </android.support.v4.view.ViewPager>
+
         </LinearLayout>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/Index_Fab"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_margin="9dp"
+            android:background="#00d4ff"
+            android:src="@mipmap/title_add_one"
+            app:backgroundTint="@android:color/holo_blue_bright"
+            app:elevation="10dp"
+            app:pressedTranslationZ="14dp"
+            tools:ignore="RtlHardcoded" />
+
+
         <LinearLayout
             android:layout_weight="0.1"
             android:layout_width="match_parent"

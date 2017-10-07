@@ -3,6 +3,7 @@ package com.only.yc.only_onez;
 
 import android.content.Intent;
 import android.support.annotation.NonNull;
+import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
@@ -33,7 +34,7 @@ public class Index extends AppCompatActivity implements View.OnClickListener {
 
     // 抽屉点击事件
     private NavigationView navigationView;
-    // viewpager
+    // viewPager
     private ViewPager mViewPager;
     private PagerAdapter mPagerAdapter;
     private List<View> mViews = new ArrayList<View>();
@@ -41,7 +42,8 @@ public class Index extends AppCompatActivity implements View.OnClickListener {
     private  ImageButton Bfriend;
     private LinearLayout lMessage_board;
     private LinearLayout lFriend;
-
+    // 浮动按钮：FloatingActionButton
+    private FloatingActionButton Fab;
     //启动界面设置；
     @Override
     public void onBackPressed() {
@@ -61,10 +63,11 @@ public class Index extends AppCompatActivity implements View.OnClickListener {
 
         Boar_O();// 标题栏相应事件；
         NavigationView(); //抽屉相应事件；
+        //ViewPager 相应事件;
         initView();
         initEvent();
         initPage();
-
+        initFloatingActionButton();
     }
     //标题栏相应事件
     public void Boar_O() {
@@ -228,5 +231,14 @@ public class Index extends AppCompatActivity implements View.OnClickListener {
                 break;
         }
     }
-
+    //FloatingActionButton 事件；
+    public void initFloatingActionButton() {
+        Fab = (FloatingActionButton) findViewById(R.id.Index_Fab);
+        Fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(Index.this,"你点击了浮动按钮！",Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
 }
