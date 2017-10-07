@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/drawer_menu_Login"
+        android:title="@string/Login_btn_OK" />
+    <item
+        android:id="@+id/drawer_menu_Entry"
+        android:title="@string/Entry_Btn_OK" />
+    <item
+        android:id="@+id/drawer_menu_Setting"
+        android:title="设置"
+        tools:ignore="HardcodedText" />
+    <item
+        android:id="@+id/drawer_menu_Revise"
+        android:title="修改信息" />
+    <item
+        android:id="@+id/drawer_menu_UserAdd"
+        android:title="添加好友"
+        tools:ignore="HardcodedText" />
+    <item
+        android:id="@+id/drawer_menu_Contact"
+        android:title="联系我们"
+        tools:ignore="HardcodedText" />
+</menu>

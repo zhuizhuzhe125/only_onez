@@ -5,54 +5,50 @@
     android:id="@+id/Index_DrawerLayout_Main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@mipmap/backgurand"
+    android:clickable="true"
     tools:context="com.only.yc.only_onez.Index">
+    <LinearLayout
+        android:weightSum="4"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="UselessParent">
+            <include layout="@layout/title"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_weight="3.9"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            tools:ignore="InefficientWeight,UselessLeaf">
+            <android.support.v4.view.ViewPager
+                android:id="@+id/Index_ViewPager"
+                android:background="#ffffff"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
+            </android.support.v4.view.ViewPager>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_weight="0.1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <include layout="@layout/bottom"/>
+        </LinearLayout>
+    </LinearLayout>
     <android.support.design.widget.NavigationView
+        android:id="@+id/Index_Nav"
         app:headerLayout="@layout/index_drawerlayout_head"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:background="#ffffff"
+        app:menu="@menu/drawer_menu"
         android:layout_gravity="start">
 
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-            <Button
-                android:id="@+id/Index_Navigat_Button_Login"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom"
-                android:layout_marginLeft="15dp"
-                android:background="#19ed20"
-                android:text="@string/Entry_Btn_OK"
-                tools:ignore="RtlHardcoded" />
-
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-                <Button
-                    android:id="@+id/Index_Navigat_Button_Exit"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom"
-                    android:layout_marginLeft="40dp"
-                    android:background="#19ed20"
-                    android:text="@string/Exit"
-                    tools:ignore="RtlHardcoded" />
-
-            </LinearLayout>
-
-        </LinearLayout>
     </android.support.design.widget.NavigationView>
 
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <include layout="@layout/title" />
-    </LinearLayout>
+
 
 </android.support.v4.widget.DrawerLayout>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="#ffff"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:ignore="DisableBaselineAlignment,UselessParent">
+        <LinearLayout
+            android:id="@+id/Bottom_Linear_Message_board"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:ignore="UselessParent">
+                <ImageButton
+                    android:id="@+id/Bottom_Button_MessageBoard"
+                    android:clickable="false"
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="3dp"
+                    android:layout_marginLeft="10dp"
+                    android:src="@mipmap/message_board_one"
+                    tools:ignore="ButtonStyle,ContentDescription,RtlHardcoded" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/Bottom_Linear_Friend"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+                <ImageButton
+                    android:id="@+id/Bottom_Button_Friend"
+                    android:clickable="false"
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="10dp"
+                    android:src="@mipmap/friend"
+                    tools:ignore="ButtonStyle,ContentDescription,RtlHardcoded"
+                    android:contentDescription="" />
+        </LinearLayout>
+        </LinearLayout>
+</LinearLayout>

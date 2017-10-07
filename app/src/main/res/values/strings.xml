@@ -12,5 +12,7 @@
     <string name="Entry_Btn_OK">登&#160;&#160;录</string>
     <string name="Index_Drawer_head_Txt_UserTitle">个性签名</string>
     <string name="Exit">退&#160;&#160;出</string>
+    <string name="Bottom_button_MessageBoard">Message Board</string>
+    <string name="Bottom_button_Friend">Friend</string>
     <!--<string name="Login_btn_Q">重&#160;&#160;置</string>-->
 </resources>
