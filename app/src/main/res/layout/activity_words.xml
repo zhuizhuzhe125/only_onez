@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ede7ae"
+    tools:context="com.only.yc.only_onez.words">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/Words_Toolbar"
+        android:layout_width="match_parent"
+        android:background="#fcf9db"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/Words_Button_Publish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#fcf9db"
+            android:layout_gravity="right"
+            android:layout_marginRight="15dp"
+            android:text="@string/Words_Btn_Publish"
+            tools:ignore="RtlHardcoded" />
+
+    </android.support.v7.widget.Toolbar>
+
+    <EditText
+        android:id="@+id/Words_EditText_word"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:background="@mipmap/messageboard_background"
+        android:gravity="center"
+        tools:ignore="TextFields"
+        android:maxLines="30" />
+
+
+</LinearLayout>

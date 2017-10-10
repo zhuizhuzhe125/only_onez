@@ -38,8 +38,8 @@ public class Index extends AppCompatActivity implements View.OnClickListener {
     private ViewPager mViewPager;
     private PagerAdapter mPagerAdapter;
     private List<View> mViews = new ArrayList<View>();
-    private  ImageButton Bmessage;
-    private  ImageButton Bfriend;
+    private ImageButton Bmessage;
+    private ImageButton Bfriend;
     private LinearLayout lMessage_board;
     private LinearLayout lFriend;
     // 浮动按钮：FloatingActionButton
@@ -91,12 +91,28 @@ public class Index extends AppCompatActivity implements View.OnClickListener {
             public void onClick(View v) {
                 PopupMenu popup = new PopupMenu(Index.this,ImageView_Menu);
                 popup.getMenuInflater().inflate(R.menu.mian, popup.getMenu());
-//                popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
-//                    @Override
-//                    public boolean onMenuItemClick(MenuItem item) {
-//                     标签点击事件；
-//                    }
-//                });
+                popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+
+                   @Override
+                   public boolean onMenuItemClick(MenuItem item) {
+                       switch (item.getItemId()) {
+                           case R.id.Index_menu_Search:
+                               intent.setClass(Index.this,search.class);
+                               startActivity(intent);
+                               break;
+                           case R.id.Index_menu_Add:
+                               Toast.makeText(Index.this,"您点击了添加好友",Toast.LENGTH_SHORT).show();
+                               break;
+                           case R.id.Index_menu_Setting:
+                               Toast.makeText(Index.this,"您点击了设置",Toast.LENGTH_SHORT).show();
+                               break;
+                           default:
+                               break;
+                       }
+                       return false;
+                   }
+
+                });
 
                 popup.show();
             }
@@ -122,7 +138,9 @@ public class Index extends AppCompatActivity implements View.OnClickListener {
                         startActivity(intent);
                         break;
                     case R.id.drawer_menu_Revise:
-                        Toast.makeText(Index.this, "您点击了修改信息", Toast.LENGTH_SHORT).show();
+                        //修改页面
+                        intent.setClass(Index.this,Modify.class);
+                        startActivity(intent);
                         break;
                     case  R.id.drawer_menu_Setting:
                         Toast.makeText(Index.this, "您点击了设置", Toast.LENGTH_SHORT).show();
@@ -237,7 +255,8 @@ public class Index extends AppCompatActivity implements View.OnClickListener {
         Fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(Index.this,"你点击了浮动按钮！",Toast.LENGTH_SHORT).show();
+                intent.setClass(Index.this,words.class);
+                startActivity(intent);
             }
         });
     }

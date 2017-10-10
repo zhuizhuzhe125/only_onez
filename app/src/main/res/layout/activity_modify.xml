@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ffff"
+    tools:context="com.only.yc.only_onez.Modify">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/Modify_Toolbar"
+        android:layout_width="match_parent"
+        android:background="#fcf9db"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/Modify_Button_Modify"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#fcf9db"
+            android:layout_gravity="right"
+            android:layout_marginRight="10dp"
+            android:text="@string/Modify_Button_Modify"/>
+
+    </android.support.v7.widget.Toolbar>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:id="@+id/Modify_Text_UserId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:textSize="20dp"
+            android:text="@string/UserId"
+            tools:ignore="RtlHardcoded,SpUsage" />
+        <EditText
+            android:id="@+id/Modify_Edit_UserId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            tools:ignore="RtlHardcoded"
+            android:inputType="" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:id="@+id/Modify_Text_UserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:textSize="20dp"
+            android:text="@string/UserName"
+            tools:ignore="RtlHardcoded,SpUsage" />
+        <EditText
+            android:id="@+id/Modify_Edit_UserName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            tools:ignore="RtlHardcoded"
+            android:inputType="" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:id="@+id/Modify_Text_UserE_mall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:textSize="20dp"
+            android:text="@string/UserE_mall"
+            tools:ignore="RtlHardcoded,SpUsage" />
+        <EditText
+            android:id="@+id/Modify_Edit_UserE_mall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            tools:ignore="RtlHardcoded"
+            android:inputType="" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:id="@+id/Modify_Text_UserAge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:textSize="20dp"
+            android:text="@string/UserAge"
+            tools:ignore="RtlHardcoded,SpUsage" />
+        <EditText
+            android:id="@+id/Modify_Edit_UserAge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            tools:ignore="RtlHardcoded"
+            android:inputType="" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:id="@+id/Modify_Text_UserSex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:textSize="20dp"
+            android:text="@string/UserSex"
+            tools:ignore="RtlHardcoded,SpUsage" />
+        <EditText
+            android:id="@+id/Modify_Edit_UserSex"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            tools:ignore="RtlHardcoded"
+            android:inputType="" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+
+
+        <EditText
+            android:id="@+id/Modify_Edit_UserTitle"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:gravity="center"
+            android:hint="个性签名"
+            tools:ignore="HardcodedText" />
+    </LinearLayout>
+
+</LinearLayout>

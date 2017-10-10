@@ -3,16 +3,25 @@
     <string name="Login_name">注册</string>
     <string name="Entry_name">登录</string>
     <string name="UserName">用&#160;&#160;户&#160;&#160;名：</string>
+    <string name="UserId">用&#160;&#160;户&#160;&#160;ID：</string>
     <string name="UserPassword">密&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;码：</string>
+    <string name="UserSex">性&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;别：</string>
+    <string name="UserE_mall">邮&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;箱：</string>
+    <string name="UserAge">年&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;龄：</string>
     <string name="ShowUserName">请输入用户名！</string>
     <string name="ShowUserPassword">请输入密码！</string>
     <string name="ShowtUserPassword">确认密码：</string>
     <string name="ShowtoUserPassword">确认密码！</string>
     <string name="Login_btn_OK">注&#160;&#160;册</string>
     <string name="Entry_Btn_OK">登&#160;&#160;录</string>
+    <string name="search_name">搜&#160;&#160;索</string>
+    <string name="Modify_Button_Modify">修&#160;&#160;改</string>
     <string name="Index_Drawer_head_Txt_UserTitle">个性签名</string>
     <string name="Exit">退&#160;&#160;出</string>
     <string name="Bottom_button_MessageBoard">Message Board</string>
     <string name="Bottom_button_Friend">Friend</string>
+    <string name="Words_name">发表留言</string>
+    <string name="Words_Btn_Publish">发&#160;&#160;表</string>
+    <string name="Modify_name">修改信息</string>
     <!--<string name="Login_btn_Q">重&#160;&#160;置</string>-->
 </resources>
