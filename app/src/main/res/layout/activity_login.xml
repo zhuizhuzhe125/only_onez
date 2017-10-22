@@ -13,18 +13,54 @@
         android:layout_height="wrap_content">
 
     </android.support.v7.widget.Toolbar>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        tools:ignore="UselessParent">
+
+        <TextView
+            android:id="@+id/Login_Txt_UserID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="45dp"
+            android:textSize="20sp"
+            android:text="@string/UserId"
+            tools:ignore="RtlHardcoded" />
+
+        <EditText
+            android:id="@+id/Login_Edt_UserID"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:inputType="textPersonName"
+            android:hint="@string/ShowUserName"
+            tools:ignore="RtlHardcoded" />
+
+        <ImageView
+            android:id="@+id/Login_Image_IFUser"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="5dp"/>
+
+    </LinearLayout>
+
     <LinearLayout
         android:orientation="horizontal"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         tools:ignore="UselessParent">
 
         <TextView
             android:id="@+id/Login_Txt_UserName"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="98dp"
-            android:layout_marginLeft="80dp"
+            android:layout_marginLeft="45dp"
             android:textSize="20sp"
             android:text="@string/UserName"
             tools:ignore="RtlHardcoded" />
@@ -34,9 +70,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
-            android:layout_marginTop="98dp"
             android:inputType="textPersonName"
-            android:hint="@string/ShowUserName"
+            android:hint="@string/ShowtUserName"
             tools:ignore="RtlHardcoded" />
 
     </LinearLayout>
@@ -46,6 +81,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:orientation="horizontal"
         tools:ignore="UselessParent">
 
@@ -53,8 +89,7 @@
             android:id="@+id/Login_Txt_UserPassword"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="80dp"
-            android:layout_marginTop="38dp"
+            android:layout_marginLeft="45dp"
             android:text="@string/UserPassword"
             android:textSize="20sp"
             tools:ignore="RtlHardcoded" />
@@ -63,7 +98,6 @@
             android:id="@+id/Login_Edt_UserPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="38dp"
             android:layout_marginLeft="20dp"
             android:inputType="textPassword"
             android:hint="@string/ShowUserPassword"
@@ -74,6 +108,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:orientation="horizontal"
         tools:ignore="UselessParent">
 
@@ -81,8 +116,7 @@
             android:id="@+id/Login_Txt_tUserPassword"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="80dp"
-            android:layout_marginTop="38dp"
+            android:layout_marginLeft="45dp"
             android:text="@string/ShowtUserPassword"
             android:textSize="20sp"
             tools:ignore="RtlHardcoded" />
@@ -91,11 +125,87 @@
             android:id="@+id/Login_Edt_tUserPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="38dp"
             android:layout_marginLeft="20dp"
             android:inputType="textPassword"
             android:hint="@string/ShowtoUserPassword"
             tools:ignore="RtlHardcoded" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        tools:ignore="UselessParent">
+
+        <TextView
+            android:id="@+id/Login_Txt_UserE_mall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="45dp"
+            android:text="@string/Login_Edt_UserE_mall"
+            android:textSize="20sp"
+            tools:ignore="RtlHardcoded" />
+
+        <EditText
+            android:id="@+id/Login_Edt_UserE_mall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:inputType="textEmailAddress"
+            android:hint="@string/Login_Edt_UserE_mall_"
+            tools:ignore="RtlHardcoded" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        tools:ignore="UselessParent">
+
+        <TextView
+            android:id="@+id/Login_txt_UserSex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:layout_marginLeft="45dp"
+            android:text="@string/UserSex"
+            tools:ignore="RtlHardcoded" />
+
+        <RadioGroup
+            android:id="@+id/Login_RadioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:orientation="horizontal"
+            tools:ignore="RtlHardcoded">
+
+            <RadioButton
+                android:id="@+id/Login_Radio_man"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="@string/Radion_man"/>
+            <RadioButton
+                android:id="@+id/Login_Radio_wem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="@string/Radion_wem"
+                tools:ignore="RtlHardcoded" />
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        tools:ignore="UselessLeaf,UselessParent">
 
     </LinearLayout>
 
@@ -109,8 +219,8 @@
             android:id="@+id/Login_btn_OK"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="90dp"
-            android:layout_marginTop="70dp"
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop="50dp"
             android:text="@string/Login_btn_OK"
             tools:ignore="ButtonStyle,RtlHardcoded" />
 
@@ -119,10 +229,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
-            android:layout_marginTop="70dp"
+            android:layout_marginTop="50dp"
             android:text="@string/Entry_Btn_OK"
             tools:ignore="ButtonStyle,RtlHardcoded" />
 
     </LinearLayout>
+
+
 
 </LinearLayout>

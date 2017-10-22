@@ -2,8 +2,9 @@
     <string name="app_name">Only_onez</string>
     <string name="Login_name">注册</string>
     <string name="Entry_name">登录</string>
-    <string name="UserName">用&#160;&#160;户&#160;&#160;名：</string>
-    <string name="UserId">用&#160;&#160;户&#160;&#160;ID：</string>
+    <string name="UserName">昵&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;称：</string>
+    <string name="ShowtUserName">请输入昵称!</string>
+    <string name="UserId">用&#160;&#160;户&#160;&#160;名：</string>
     <string name="UserPassword">密&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;码：</string>
     <string name="UserSex">性&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;别：</string>
     <string name="UserE_mall">邮&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;箱：</string>
@@ -23,5 +24,10 @@
     <string name="Words_name">发表留言</string>
     <string name="Words_Btn_Publish">发&#160;&#160;表</string>
     <string name="Modify_name">修改信息</string>
+    <string name="Login_Edt_UserE_mall">用户邮箱：</string>
+    <string name="Login_Edt_UserE_mall_">请输入邮箱</string>
+    <string name="Radion_man">男</string>
+    <string name="Radion_wem">女</string>
+
     <!--<string name="Login_btn_Q">重&#160;&#160;置</string>-->
 </resources>
