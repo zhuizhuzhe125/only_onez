@@ -9,7 +9,7 @@
         android:title="@string/Entry_Btn_OK" />
     <item
         android:id="@+id/drawer_menu_Setting"
-        android:title="设置"
+        android:title="设  置"
         tools:ignore="HardcodedText" />
     <item
         android:id="@+id/drawer_menu_Revise"
@@ -21,5 +21,9 @@
     <item
         android:id="@+id/drawer_menu_Contact"
         android:title="联系我们"
+        tools:ignore="HardcodedText" />
+    <item
+        android:id="@+id/drawer_menu_Logout"
+        android:title="注  销"
         tools:ignore="HardcodedText" />
 </menu>

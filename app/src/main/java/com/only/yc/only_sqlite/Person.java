@@ -26,7 +26,8 @@ public class Person {
         UserBirthday = userBirthday;
     }
 
-    public Person(String userName, String userAutograph) {
+    public Person(String userID, String userName, String userAutograph) {
+        UserID = userID;
         UserName = userName;
         UserAutograph = userAutograph;
     }

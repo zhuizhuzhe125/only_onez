@@ -65,10 +65,11 @@ public class DBManger {
     public static List<Person> Show_List(Cursor cursor) {
         List<Person> list = new ArrayList<>();
         while (cursor.moveToNext()) {
+            String User_ID = cursor.getString(cursor.getColumnIndex(Contant.USER_ID));
             String User_Name = cursor.getString(cursor.getColumnIndex(Contant.USER_NAME));
             String User_Autograph = cursor.getString(cursor.getColumnIndex(Contant.USER_AUTOGRAPH));
 
-            Person person = new Person(User_Name,User_Autograph);
+            Person person = new Person(User_ID, User_Name, User_Autograph);
             list.add(person);
         }
         return list;

@@ -55,6 +55,7 @@
             <include layout="@layout/bottom"/>
         </LinearLayout>
     </LinearLayout>
+
     <android.support.design.widget.NavigationView
         android:id="@+id/Index_Nav"
         android:layout_width="wrap_content"
@@ -62,9 +63,7 @@
         android:background="#ffffff"
         app:menu="@menu/drawer_menu"
         android:layout_gravity="start">
-
     </android.support.design.widget.NavigationView>
-
 
 
 </android.support.v4.widget.DrawerLayout>

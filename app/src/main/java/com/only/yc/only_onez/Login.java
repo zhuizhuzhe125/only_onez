@@ -154,6 +154,7 @@ public class Login extends AppCompatActivity {
                 if(!hasFocus) {
                     if(InIf == 0) {
                         If_Image.setImageResource(R.mipmap.if_ok);
+                        btn_ok.setEnabled(true);
                     } else {
                         If_Image.setImageResource(R.mipmap.if_error);
                         Toast.makeText(Login.this,"此用户名不可用",Toast.LENGTH_SHORT).show();
