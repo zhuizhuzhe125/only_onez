@@ -2,6 +2,7 @@ package com.only.yc.only_onez;
 
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.annotation.NonNull;
@@ -24,7 +25,6 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.only.yc.only_ImageView.UserSharedPreferences;
 import com.only.yc.only_sqlite.Contant;
 import com.only.yc.only_sqlite.DBManger;
 import com.only.yc.only_sqlite.Person;
@@ -35,14 +35,11 @@ import java.util.List;
 
 public class Index extends AppCompatActivity implements View.OnClickListener {
     final Intent intent = new Intent();
-    //初始化数据库；
-
     //点击头像打开抽屉；
     private ImageView ImageView_Drawer;
     private ImageView ImageView_Menu;
     //声明抽屉；
     private DrawerLayout Mdrawer;
-
     // 抽屉点击事件
     private NavigationView navigationView;
     // viewPager
@@ -57,14 +54,15 @@ public class Index extends AppCompatActivity implements View.OnClickListener {
     private FloatingActionButton Fab;
     // 数据库调用；
     private static SQLiteHelper helper;
-
     //用户名称显示；
     private TextView txt_UserID;//用户ID
     private TextView txt_UserAutoGraph;
     private TextView txt_UserName;
     private String token;
-
-
+    private String User_ID;//用户ID；
+    private View vide;
+    private TextView User_Title;
+    private SharedPreferences pref;
     //启动界面设置；
     @Override
     public void onBackPressed() {
@@ -81,19 +79,13 @@ public class Index extends AppCompatActivity implements View.OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_index);
-
         //判断用户是否登录
-        token = UserSharedPreferences.getCachedToken(this);
-        if(token == null) {
-            intent.setClass(Index.this,Entry.class);
-            startActivity(intent);
-        }
-
+        pref = getSharedPreferences("date",MODE_PRIVATE);
+        token = pref.getString("token","");
         // 数据库;
         helper = DBManger.getIntance(this);
-        //
+        //抽屉标题事件；
         Boar_O();// 标题栏相应事件；
-
         NavigationView(); //抽屉相应事件；
         //ViewPager 相应事件;
         initView();
@@ -102,6 +94,8 @@ public class Index extends AppCompatActivity implements View.OnClickListener {
         initFloatingActionButton();
         // 初始化用户；
         initUser();
+        // 更改个性签名；
+        initUserTitle();
     }
     //标题栏相应事件
     public void Boar_O() {
@@ -174,6 +168,7 @@ public class Index extends AppCompatActivity implements View.OnClickListener {
                     case R.id.drawer_menu_Revise:
                         //修改页面
                         intent.setClass(Index.this,Modify.class);
+                        intent.putExtra("USER_ID",User_ID);
                         startActivity(intent);
                         break;
                     case  R.id.drawer_menu_Setting:
@@ -189,8 +184,8 @@ public class Index extends AppCompatActivity implements View.OnClickListener {
                         if(token != null) {
                             intent.setClass(Index.this, Entry.class);
                             intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+                            pref.edit().clear().commit();
                             startActivity(intent);
-                            UserSharedPreferences.ClearData();
                         } else {
                             Toast.makeText(Index.this, "用户未登录", Toast.LENGTH_SHORT).show();
                         }
@@ -304,16 +299,19 @@ public class Index extends AppCompatActivity implements View.OnClickListener {
             }
         });
     }
+
     //初始化用户；
     public void initUser() {
         SQLiteDatabase db = helper.getWritableDatabase();
-        View vide = navigationView.inflateHeaderView(R.layout.index_drawerlayout_head);
+        vide = navigationView.inflateHeaderView(R.layout.index_drawerlayout_head);
         txt_UserID = (TextView) vide.findViewById(R.id.Index_Drawer_head_Txt_UserName);
         txt_UserAutoGraph = (TextView) vide.findViewById(R.id.Index_Drawer_head_Txt_UserTitle);
         txt_UserName = (TextView) findViewById(R.id.Title_txt_UserName);
         Intent inte = getIntent();
-        String User_ID = inte.getStringExtra("User_id");
-        String sql = "select "+Contant.USER_ID+", "+ Contant.USER_NAME+", "+Contant.USER_AUTOGRAPH+" from "+Contant.TABLE_NAME+" " +
+        User_ID = inte.getStringExtra("User_id");
+        //
+        String sql = "select "+Contant.USER_ID+", "+ Contant.USER_NAME+", "+Contant.USER_AUTOGRAPH+""+
+                " from "+Contant.TABLE_NAME+" " +
                 " where "+Contant.USER_ID+" = '"+User_ID+"'";
         Cursor cursor = DBManger.Select(db, sql, null);
         List<Person> list = DBManger.Show_List(cursor);
@@ -326,4 +324,28 @@ public class Index extends AppCompatActivity implements View.OnClickListener {
 
 
     }
+
+    // 个性签名；
+    public void initUserTitle() {
+        User_Title = (TextView) vide.findViewById(R.id.Index_Drawer_head_Txt_UserTitle);
+        User_Title.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                intent.setClass(Index.this,Modify.class);
+                intent.putExtra("USER_ID",User_ID);
+                startActivity(intent);
+            }
+        });
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+    }
+
 }

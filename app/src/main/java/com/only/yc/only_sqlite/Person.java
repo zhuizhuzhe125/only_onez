@@ -14,14 +14,14 @@ public class Person {
     private String UserSex;//用户性别；
     private String UserBirthday;//用户生日
 
-    public Person(String userID, String userName, String userPassword, String userE_mall,
-                  String userSex, String userBirthday, String userImage, String userAutograph) {
+    public Person(String userID, String userName, String userE_mall,
+                  String userSex, String userBirthday, String userAutograph) {
         UserID = userID;
         UserName = userName;
-        UserPassword = userPassword;
+        //UserPassword = userPassword;
         UserE_mall = userE_mall;
         UserAutograph = userAutograph;
-        UserImage = userImage;
+        //UserImage = userImage;
         UserSex = userSex;
         UserBirthday = userBirthday;
     }

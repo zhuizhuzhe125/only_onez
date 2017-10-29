@@ -1,6 +1,7 @@
 package com.only.yc.only_onez;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
@@ -12,7 +13,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.only.yc.only_ImageView.UserSharedPreferences;
 import com.only.yc.only_sqlite.Contant;
 import com.only.yc.only_sqlite.DBManger;
 import com.only.yc.only_sqlite.SQLiteHelper;
@@ -52,13 +52,16 @@ public class Entry extends AppCompatActivity {
                 String User_id = User_ID.getText().toString();
                 String User_password = User_Password.getText().toString();
 
-                String sql = "select "+ Contant.USER_ID+", "+Contant.USER_PASSWORD+" from "+Contant.TABLE_NAME+" where "+Contant.USER_ID+" = '"+User_id+"' and " +
+                String sql = "select "+ Contant.USER_ID+", "+Contant.USER_PASSWORD+" from "+Contant.TABLE_NAME+" " +
+                        "where "+Contant.USER_ID+" = '"+User_id+"' and " +
                         ""+Contant.USER_PASSWORD+" = '"+User_password+"'";
                 Cursor cursor1 =DBManger.Select(db,sql,null);
                 int InIf = cursor1.getCount();
                 if(!"".equals(User_id) && !"".equals(User_password)) {
                     if (InIf != 0) {
-                        UserSharedPreferences.cacheToken(Entry.this, User_id);
+                        SharedPreferences.Editor e = getSharedPreferences("date",MODE_PRIVATE).edit();
+                        e.putString("token",User_id);
+                        e.apply();
                         intent.setClass(Entry.this, Index.class);
                         intent.putExtra("User_id", User_id);
                         startActivity(intent);

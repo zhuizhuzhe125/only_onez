@@ -8,7 +8,7 @@
     <string name="UserPassword">密&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;码：</string>
     <string name="UserSex">性&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;别：</string>
     <string name="UserE_mall">邮&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;箱：</string>
-    <string name="UserAge">年&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;龄：</string>
+    <string name="UserAge">生&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;日：</string>
     <string name="ShowUserName">请输入用户名！</string>
     <string name="ShowUserPassword">请输入密码！</string>
     <string name="ShowtUserPassword">确认密码：</string>

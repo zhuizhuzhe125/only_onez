@@ -13,6 +13,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RadioGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.only.yc.only_sqlite.Contant;
@@ -24,6 +25,7 @@ import com.only.yc.only_sqlite.SQLiteHelper;
 public class Login extends AppCompatActivity {
 
     final Intent intent = new Intent();
+    private final int QINGQIUMA_TWO = 716;
     private SQLiteHelper helper;
     private Toolbar mToolBar;
     private Button btn_ok;
@@ -37,7 +39,8 @@ public class Login extends AppCompatActivity {
     private EditText User_tPassword;
     private EditText User_E_mall;
     private ImageView If_Image;
-
+    private TextView User_BirthDay;
+    String birth_Day;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,7 +55,7 @@ public class Login extends AppCompatActivity {
         User_Login();
         User_if();
         btn_q = (Button) findViewById(R.id.Login_btn_Q);
-
+        User_birthday();
 
         //登录跳转
         btn_q.setOnClickListener(new View.OnClickListener() {
@@ -103,6 +106,30 @@ public class Login extends AppCompatActivity {
         });
     }
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        switch (requestCode) {
+            case QINGQIUMA_TWO:
+                if(resultCode == RESULT_OK) {
+                    String Birthday = data.getStringExtra("Birth_Day");
+                    birth_Day = Birthday;
+                    User_BirthDay.setText(Birthday);
+                }
+                break;
+        }
+    }
+
+    public void User_birthday() {
+        User_BirthDay = (TextView) findViewById(R.id.Login_Edt_User_birthday);
+        User_BirthDay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                intent.setClass(Login.this,UserBirthday.class);
+                startActivityForResult(intent,QINGQIUMA_TWO);
+            }
+        });
+    }
+
     //用户注册；
     public void User_Login() {
 
@@ -112,6 +139,7 @@ public class Login extends AppCompatActivity {
         User_Password = (EditText) findViewById(R.id.Login_Edt_UserPassword);
         User_tPassword = (EditText) findViewById(R.id.Login_Edt_tUserPassword);
         User_E_mall = (EditText) findViewById(R.id.Login_Edt_UserE_mall);
+
 
         //注册跳转
         btn_ok.setOnClickListener(new View.OnClickListener() {
@@ -124,13 +152,16 @@ public class Login extends AppCompatActivity {
                 String User_e_mall = User_E_mall.getText().toString();
                 SQLiteDatabase db = helper.getWritableDatabase();
                 String sql = "insert into "+ Contant.TABLE_NAME+" values('"+User_Id+"','"+User_name+"','"+User_password+"'," +
-                        "'"+User_e_mall+"','"+User_Sex+"','2016-07-07','', '')";
+                        "'"+User_e_mall+"','"+User_Sex+"','"+birth_Day+"','', '')";
 
                 if(!"".equals(User_Id) && !"".equals(User_name) && !"".equals(User_password) && !"".equals(User_e_mall)) {
                     if(User_password.equals(User_tpassword)) {
                             DBManger.execSQl(db, sql);
                             db.close();
                             Toast.makeText(Login.this, "添加成功", Toast.LENGTH_SHORT).show();
+                            intent.setClass(Login.this, Index.class);
+                            intent.putExtra("User_id", User_Id);
+                            startActivity(intent);
                     } else {
                         Toast.makeText(Login.this, "两次密码不一样", Toast.LENGTH_SHORT).show();
                     }

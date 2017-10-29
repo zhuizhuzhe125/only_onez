@@ -30,12 +30,13 @@
     </LinearLayout>
     <TextView
         android:id="@+id/Index_Drawer_head_Txt_UserTitle"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
-        android:layout_marginLeft="60dp"
-        android:textSize="24dp"
+        android:textColor="#a8e9e7"
+        android:gravity="center"
+        android:textSize="14sp"
         android:text="@string/Index_Drawer_head_Txt_UserTitle"
-        tools:ignore="RtlHardcoded,SpUsage" />
+        tools:ignore="RtlHardcoded,TextFields" />
 
 </LinearLayout>

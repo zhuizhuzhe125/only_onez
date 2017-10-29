@@ -48,15 +48,15 @@ public class DBManger {
         while (cursor.moveToNext()) {
             String User_ID = cursor.getString(cursor.getColumnIndex(Contant.USER_ID));
             String User_Name = cursor.getString(cursor.getColumnIndex(Contant.USER_NAME));
-            String User_Password = cursor.getString(cursor.getColumnIndex(Contant.USER_PASSWORD));
+            //String User_Password = cursor.getString(cursor.getColumnIndex(Contant.USER_PASSWORD));
             String User_E_mall = cursor.getString(cursor.getColumnIndex(Contant.USER_E_MALL));
             String User_Autograph = cursor.getString(cursor.getColumnIndex(Contant.USER_AUTOGRAPH));
-            String User_Image = cursor.getString(cursor.getColumnIndex(Contant.USER_IMAGE));
+            //String User_Image = cursor.getString(cursor.getColumnIndex(Contant.USER_IMAGE));
             String User_Sex = cursor.getString(cursor.getColumnIndex(Contant.USER_SEX));
             String User_Birthday = cursor.getString(cursor.getColumnIndex(Contant.USER_BIRTHDAY));
 
-            Person person = new Person(User_ID, User_Name, User_Password, User_E_mall, User_Sex,
-                    User_Birthday, User_Image, User_Autograph);
+            Person person = new Person(User_ID, User_Name, User_E_mall, User_Sex,
+                    User_Birthday, User_Autograph);
             list.add(person);
         }
         return list;

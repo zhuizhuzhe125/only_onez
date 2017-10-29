@@ -32,8 +32,9 @@
             android:name=".Modify"
             android:label="@string/Modify_name" />
         <activity
-            android:label="@string/search_name"
-            android:name=".search"></activity>
+            android:name=".search"
+            android:label="@string/search_name" />
+        <activity android:name=".UserBirthday"></activity>
     </application>
 
 </manifest>

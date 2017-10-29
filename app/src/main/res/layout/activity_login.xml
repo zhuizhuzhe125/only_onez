@@ -45,7 +45,8 @@
             android:id="@+id/Login_Image_IFUser"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_marginTop="5dp"/>
+            android:layout_marginTop="5dp"
+            tools:ignore="ContentDescription" />
 
     </LinearLayout>
 
@@ -158,6 +159,31 @@
             tools:ignore="RtlHardcoded" />
 
     </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        tools:ignore="UselessParent">
+
+        <TextView
+            android:id="@+id/Login_Txt_User_birthday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="45dp"
+            android:text="@string/UserAge"
+            android:textSize="20sp"
+            tools:ignore="RtlHardcoded" />
+
+        <TextView
+            android:id="@+id/Login_Edt_User_birthday"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_marginLeft="20dp"
+            android:background="#b7f1e2"
+            tools:ignore="RtlHardcoded" />
+
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -232,7 +258,6 @@
             android:layout_marginTop="50dp"
             android:text="@string/Entry_Btn_OK"
             tools:ignore="ButtonStyle,RtlHardcoded" />
-
     </LinearLayout>
 
 
